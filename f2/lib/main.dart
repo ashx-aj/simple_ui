@@ -20,14 +20,14 @@ class MyApp extends StatelessWidget {
             // ignore: prefer_const_literals_to_create_immutables
             children: [
               const SizedBox(
-                height: 100,
+                height: 120,
               ), // move the login downwards
               const Text(
                 "LOGIN",
                 style: TextStyle(fontSize: 50, color: Colors.white),
               ),
               const SizedBox(
-                height: 100,
+                height: 50,
               ),
               // ignore: prefer_const_constructors
               SizedBox(
@@ -70,11 +70,38 @@ class MyApp extends StatelessWidget {
 
               Padding(
                 padding: const EdgeInsets.only(left: 280, top: 10),
-                child: Text(
-                  "Forgot Password?",
-                  style: TextStyle(fontSize: 15, color: Colors.white),
+                child: TextButton(
+                  child: Text(
+                    "Forgot Password?",
+                    style: TextStyle(fontSize: 15, color: Colors.white),
+                  ),
+                  onPressed: () {},
                 ),
               ),
+
+              Padding(
+                  padding: const EdgeInsets.only(top: 50, left: 20),
+                  child: SizedBox(
+                    height: 40,
+                    width: 100,
+                    child: ElevatedButton(
+                        onPressed: () {},
+                        child: Text("Login"),
+                        style: ElevatedButton.styleFrom(
+                            primary: Colors.amber,
+                            textStyle:
+                                TextStyle(color: Colors.white, fontSize: 20),
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(30)))),
+                  )),
+
+              Padding(
+                padding: const EdgeInsets.only(top: 10),
+                child: Text(
+                  "Don,t have an account?Sign up",
+                  style: TextStyle(color: Colors.white),
+                ),
+              )
             ],
           ),
         ),
